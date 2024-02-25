@@ -16,17 +16,4 @@ public class AbstractPlatformResourceNotFoundException extends RuntimeException 
     this.defaultUserMessage = defaultUserMessage;
   }
 
-  public AbstractPlatformResourceNotFoundException(
-      String globalisationMessageCode, String defaultUserMessage, Throwable cause) {
-    super(cause);
-    this.globalisationMessageCode = globalisationMessageCode;
-    this.defaultUserMessage = defaultUserMessage;
-  }
-
-  public AbstractPlatformResourceNotFoundException(
-      String globalisationMessageCode, Long identifier) {
-    this.globalisationMessageCode = globalisationMessageCode;
-    this.defaultUserMessage =
-        String.format("Resource with identifier %s does not exist", identifier);
-  }
 }
